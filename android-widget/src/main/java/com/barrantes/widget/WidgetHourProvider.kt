@@ -28,7 +28,7 @@ class WidgetHourProvider : AppWidgetProvider() {
 
     override fun onReceive(context: Context, intent: Intent) {
         super.onReceive(context, intent)
-        if (intent.action == "com.barrantes.widget.ACTION_FORCE_SYNC") {
+        if (intent.action == "com.barrantes.widget.ACTION_FORCE_SYNC" || intent.action == "android.appwidget.action.APPWIDGET_UPDATE") {
             val serviceIntent = Intent(context, SyncBackgroundService::class.java)
             context.startService(serviceIntent)
         }
