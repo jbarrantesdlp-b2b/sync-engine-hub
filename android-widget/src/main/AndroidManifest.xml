@@ -6,16 +6,16 @@
 
     <application
         android:networkSecurityConfig="@xml/network_security_config">
-        <receiver android:name="com.example.syncapp.WidgetHourProvider" android:exported="true">
+        <receiver android:name="com.barrantes.widget.WidgetHourProvider" android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.example.syncapp.ACTION_FORCE_SYNC" />
+                <action android:name="com.barrantes.widget.ACTION_FORCE_SYNC" />
             </intent-filter>
             <meta-data 
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_hour_info" />
         </receiver>
         
-        <service android:name="com.example.syncapp.SyncBackgroundService" android:exported="false" />
+        <service android:name="com.barrantes.widget.SyncBackgroundService" android:exported="false" />
     </application>
 </manifest>
