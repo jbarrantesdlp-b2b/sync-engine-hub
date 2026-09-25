@@ -1,8 +1,8 @@
 ﻿node_modules/
+.gradle/
 .antigravity/
+.vercel/
+.grok/
 android-widget/build/
-android-widget/.gradle/
-android-widget/captures/
+*.zip
 *.apk
-*.log
-.env
