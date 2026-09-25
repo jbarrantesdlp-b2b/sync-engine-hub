@@ -1,0 +1,46 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:2:1-30:12
+	package
+		INJECTED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:4:5-28:19
+receiver#com.syncengine.hub.widget.HourWidgetProvider
+ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:5:9-15:20
+	android:label
+		ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:8:13-53
+	android:exported
+		ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:7:13-36
+	android:name
+		ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:6:13-47
+intent-filter#action:name:android.appwidget.action.APPWIDGET_UPDATE
+ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:9:13-11:29
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:10:17-84
+	android:name
+		ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:10:25-81
+meta-data#android.appwidget.provider
+ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:12:13-14:60
+	android:resource
+		ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:14:17-57
+	android:name
+		ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:13:17-58
+receiver#com.syncengine.hub.widget.HubGlanceWidgetReceiver
+ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:17:9-27:20
+	android:label
+		ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:20:13-51
+	android:exported
+		ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:19:13-36
+	android:name
+		ADDED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:18:13-52
+uses-sdk
+INJECTED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml
+INJECTED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml

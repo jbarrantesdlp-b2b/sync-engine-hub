@@ -1,0 +1,7 @@
+{
+  "java.jdt.ls.java.home": "C:\\Users\\joseb\\.jdks\\jbr-17.0.14",
+  "gradle.java.home": "C:\\Users\\joseb\\.jdks\\jbr-17.0.14",
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "less.lint.unknownAtRules": "ignore"
+}

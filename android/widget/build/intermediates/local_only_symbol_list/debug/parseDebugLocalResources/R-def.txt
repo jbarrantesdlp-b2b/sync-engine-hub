@@ -1,0 +1,27 @@
+R_DEF: Internal format may change without notice
+local
+drawable bg_widget_cyber_wave
+drawable dot_neon_emerald
+drawable dot_silver
+drawable energy_f0
+drawable energy_f1
+drawable energy_f2
+drawable energy_f3
+drawable ic_sync_engine_brand
+drawable ic_sync_engine_logo
+drawable pill_background
+drawable pill_telemetry_bg
+drawable ring_dark
+drawable ring_purple
+drawable widget_background
+id energy_flipper
+id widget_date_clock
+id widget_root
+id widget_text_clock
+layout widget_hour
+string widget_description
+string widget_hour_desc
+string widget_hour_name
+string widget_name
+xml hour_widget_info
+xml hub_widget_info

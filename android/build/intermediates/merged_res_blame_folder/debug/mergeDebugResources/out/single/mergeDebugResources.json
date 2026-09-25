@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-debug-4:\\drawable_energy_f1.xml.flat",
+        "source": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-main-6:\\drawable\\energy_f1.xml"
+    },
+    {
+        "merged": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-debug-4:\\drawable_ic_sync_engine_brand.png.flat",
+        "source": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-main-6:\\drawable\\ic_sync_engine_brand.png"
+    },
+    {
+        "merged": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-debug-4:\\layout_widget_hour.xml.flat",
+        "source": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-main-6:\\layout\\widget_hour.xml"
+    },
+    {
+        "merged": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-debug-4:\\drawable_energy_f2.xml.flat",
+        "source": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-main-6:\\drawable\\energy_f2.xml"
+    },
+    {
+        "merged": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-debug-4:\\drawable_energy_f3.xml.flat",
+        "source": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-main-6:\\drawable\\energy_f3.xml"
+    },
+    {
+        "merged": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-debug-4:\\drawable_ic_sync_engine_logo.png.flat",
+        "source": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-main-6:\\drawable\\ic_sync_engine_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-debug-4:\\drawable_energy_f0.xml.flat",
+        "source": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-main-6:\\drawable\\energy_f0.xml"
+    },
+    {
+        "merged": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-debug-4:\\drawable_bg_widget_cyber_wave.png.flat",
+        "source": "C:\\Users\\joseb\\.gradle\\daemon\\8.11.1\\com.syncengine.hub.android-main-6:\\drawable\\bg_widget_cyber_wave.png"
+    },
+    {
+        "merged": "com.syncengine.hub.android-debug-4:/layout_widget_hour.xml.flat",
+        "source": "com.syncengine.hub.android-main-6:/layout/widget_hour.xml"
+    }
+]

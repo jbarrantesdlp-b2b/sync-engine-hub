@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Sync Engine",
+      "hasCanvas": false,
+      "bodyTextLen": 391,
+      "bodyTextHash": "9f2860a24d514a273c749b9d610ce06add44d8c366339dfe563083f0e8f39282",
+      "bodyTextPrefix": "SYNC ENGINE Crear cuenta Tus relojes, en tu pantalla. Regístrate",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Sync Engine",
+      "hasCanvas": false,
+      "bodyTextLen": 391,
+      "bodyTextHash": "f5e721131c073325d176006bee72ba51c39439cda50f07d0c8e9aafca0d14f5b",
+      "bodyTextPrefix": "SYNC ENGINE Crear cuenta Tus relojes, en tu pantalla. Regístrate",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

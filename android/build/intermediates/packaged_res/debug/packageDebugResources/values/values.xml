@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_description">Monitors real-time sync state with Desktop Node on Port 8123</string>
+    <string name="widget_hour_desc">Reloj digital con animación de energía fluida</string>
+    <string name="widget_hour_name">Hora</string>
+    <string name="widget_name">Sync Engine Hub Widget</string>
+</resources>

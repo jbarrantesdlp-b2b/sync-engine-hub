@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Sync Engine",
+      "hasCanvas": false,
+      "bodyTextLen": 211,
+      "bodyTextHash": "7c324bea21b14babbe202a2aa4c3b452811523df697fc599df3d497e960e828b",
+      "bodyTextPrefix": "SYNC ENGINE Crear cuenta 18:57 23 miércoles 2026 SYNC ENGINE — T",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Sync Engine",
+      "hasCanvas": false,
+      "bodyTextLen": 211,
+      "bodyTextHash": "7c324bea21b14babbe202a2aa4c3b452811523df697fc599df3d497e960e828b",
+      "bodyTextPrefix": "SYNC ENGINE Crear cuenta 18:57 23 miércoles 2026 SYNC ENGINE — T",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ViewFlipper de energía fluida (autoStart true, flipInterval 700) -->
+    <ViewFlipper
+        android:id="@+id/energy_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:autoStart="true"
+        android:flipInterval="700">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/energy_f0" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/energy_f1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/energy_f2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/energy_f3" />
+    </ViewFlipper>
+
+    <!-- Contenido del Reloj y Fecha -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <!-- TextClock con autoSize de 72sp a 168sp y layout_weight 1 -->
+        <TextClock
+            android:id="@+id/widget_text_clock"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:format24Hour="HH:mm"
+            android:format12Hour="hh:mm"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="72sp"
+            android:autoSizeMaxTextSize="168sp"
+            android:autoSizeStepGranularity="2sp" />
+
+        <!-- Fecha en tono lavanda/púrpura (#C084FC) -->
+        <TextClock
+            android:id="@+id/widget_date_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:format24Hour="d EEEE yyyy"
+            android:format12Hour="d EEEE yyyy"
+            android:textColor="#C084FC"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:layout_marginBottom="4dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

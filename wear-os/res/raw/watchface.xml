@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<WatchFace width="450" height="450">
+  <Scene>
+    <DigitalClock x="25" y="150" width="400" height="110">
+      <TimeText x="0" y="0" width="400" height="110" format="HH:mm" align="CENTER">
+        <Font family="SYNC_TO_DEVICE" size="72" color="#F4F7F8" />
+      </TimeText>
+    </DigitalClock>
+
+    <!-- Hueco. El usuario elige batería, enlace o pasos. Vacío si no hay dato. -->
+    <ComplicationSlot
+        slotId="10"
+        supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY"
+        x="125"
+        y="280"
+        width="200"
+        height="70">
+      <DefaultProviderPolicy
+          primaryProvider="com.barrantes.syncengine/com.barrantes.syncengine.complication.LinkStatusComplicationService"
+          primaryProviderType="SHORT_TEXT" />
+      <BoundingOval x="0" y="0" width="200" height="70" />
+      <Complication type="SHORT_TEXT">
+        <PartText x="0" y="10" width="200" height="50">
+          <Text align="CENTER">
+            <Font family="SYNC_TO_DEVICE" size="22" color="#3AD7F5">
+              <Template><![CDATA[%s]]>
+                <Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <PartText x="0" y="10" width="200" height="50">
+          <Text align="CENTER">
+            <Font family="SYNC_TO_DEVICE" size="22" color="#3AD7F5">
+              <Template><![CDATA[%s]]>
+                <Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+    </ComplicationSlot>
+  </Scene>
+</WatchFace>

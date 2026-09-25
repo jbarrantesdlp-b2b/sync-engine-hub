@@ -1,0 +1,55 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.syncengine.hub.widget" >
+4
+5    <uses-sdk android:minSdkVersion="26" />
+6
+7    <application>
+7-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:4:5-28:19
+8        <receiver
+8-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:5:9-15:20
+9            android:name="com.syncengine.hub.widget.HourWidgetProvider"
+9-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:6:13-47
+10            android:exported="true"
+10-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:7:13-36
+11            android:label="@string/widget_hour_name" >
+11-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:8:13-53
+12            <intent-filter>
+12-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:9:13-11:29
+13                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+13-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:10:17-84
+13-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:10:25-81
+14            </intent-filter>
+15
+16            <meta-data
+16-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:12:13-14:60
+17                android:name="android.appwidget.provider"
+17-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:13:17-58
+18                android:resource="@xml/hour_widget_info" />
+18-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:14:17-57
+19        </receiver>
+20        <receiver
+20-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:17:9-27:20
+21            android:name="com.syncengine.hub.widget.HubGlanceWidgetReceiver"
+21-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:18:13-52
+22            android:exported="true"
+22-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:19:13-36
+23            android:label="Sync Engine Hub Widget" >
+23-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:20:13-51
+24            <intent-filter>
+24-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:9:13-11:29
+25                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+25-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:10:17-84
+25-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:10:25-81
+26            </intent-filter>
+27
+28            <meta-data
+28-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:12:13-14:60
+29                android:name="android.appwidget.provider"
+29-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:13:17-58
+30                android:resource="@xml/hub_widget_info" />
+30-->C:\REPOSITORIOS_BARRANTESCO\sync-engine-hub\android\widget\src\main\AndroidManifest.xml:14:17-57
+31        </receiver>
+32    </application>
+33
+34</manifest>
