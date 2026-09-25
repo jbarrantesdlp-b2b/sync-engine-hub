@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://android.com"
+    xmlns:aapt="http://android.com">
+    
+    <!-- Referencia al vector base de energía -->
+    <android:drawable>
+        <vector
+            android:name="vector"
+            android:width="360dp"
+            android:height="360dp"
+            android:viewportWidth="360"
+            android:viewportHeight="360">
+            <path
+                android:name="energy_path"
+                android:pathData="M 180,20 C 268.37,20 340,91.63 340,180 C 340,268.37 268.37,340 180,340 C 91.63,340 20,268.37 20,180 C 20,91.63 91.63,20 180,20 Z"
+                android:strokeColor="#00FFC2"
+                android:strokeWidth="4"
+                android:strokeLineCap="round"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </vector>
+    </android:drawable>
+
+    <!-- Animación cíclica de flujo continuo -->
+    <target android:name="energy_path">
+        <aapt:attr name="android:animation">
+            <set android:ordering="together">
+                <objectAnimator
+                    android:propertyName="trimPathOffset"
+                    android:duration="2400"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:repeatCount="infinite"
+                    android:interpolator="@android:anim/linear_interpolator" />
+                <objectAnimator
+                    android:propertyName="strokeColor"
+                    android:duration="4800"
+                    android:valueFrom="#00FFC2"
+                    android:valueTo="#0077FF"
+                    android:valueType="intType"
+                    android:repeatCount="infinite"
+                    android:repeatMode="reverse"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator" />
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>
