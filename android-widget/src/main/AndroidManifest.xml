@@ -1,12 +1,21 @@
-﻿<manifest xmlns:android="http://android.com"
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://android.com"
     package="com.example.sync">
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application>
         <receiver android:name=".WidgetHourProvider" android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.example.sync.ACTION_FORCE_SYNC" />
             </intent-filter>
-            <meta-data android:name="android.appwidget.provider"
-                       android:resource="@xml/widget_hour_info" />
+            <meta-data 
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_hour_info" />
         </receiver>
+        
+        <service android:name=".SyncBackgroundService" android:exported="false" />
     </application>
 </manifest>
