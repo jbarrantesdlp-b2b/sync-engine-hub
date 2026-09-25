@@ -1,4 +1,4 @@
-﻿package com.example.sync
+﻿package com.example.syncapp
 
 import android.util.Log
 import io.socket.client.IO
