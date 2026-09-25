@@ -1,0 +1,8 @@
+﻿node_modules/
+.antigravity/
+android-widget/build/
+android-widget/.gradle/
+android-widget/captures/
+*.apk
+*.log
+.env
