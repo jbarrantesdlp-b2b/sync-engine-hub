@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reloj · energía</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(ellipse 55% 42% at -8% -6%, rgba(42, 78, 40, 0.55), transparent 58%),
+        radial-gradient(ellipse 48% 40% at 108% 8%, rgba(24, 52, 30, 0.42), transparent 60%),
+        #070908;
+      color: #f6f6f4;
+      font-family: Inter, system-ui, sans-serif;
+    }
+    .hour {
+      position: relative;
+      isolation: isolate;
+      width: min(92vw, 520px);
+      container-type: inline-size;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 3.2cqi 4cqi 2.8cqi;
+      background: rgba(12, 14, 16, 0.72);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    }
+    .hour::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse at 0% 0%, rgba(52, 86, 46, 0.28), transparent 46%),
+        radial-gradient(ellipse at 100% 120%, rgba(0, 0, 0, 0.62), transparent 48%);
+    }
+    .hour::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(165deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.03) 38%, rgba(255, 255, 255, 0.02));
+      backdrop-filter: blur(16px) saturate(1.25);
+    }
+    .flux {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: screen;
+      opacity: 0.62;
+      pointer-events: none;
+    }
+    .flux path { fill: none; stroke-linecap: round; }
+    .time, .date { position: relative; z-index: 2; margin: 0; text-align: center; pointer-events: none; }
+    .glow {
+      position: absolute;
+      z-index: 1;
+      width: 48%;
+      aspect-ratio: 1;
+      left: 50%;
+      top: 46%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 79, 216, 0.45) 26%, rgba(103, 232, 249, 0.2) 48%, transparent 70%);
+      mix-blend-mode: screen;
+      filter: blur(6px);
+      opacity: 0;
+      transition: opacity 0.28s ease;
+    }
+    .glow.is-on { opacity: 0.9; }
+    .time {
+      font-family: "Space Grotesk", "Segoe UI", sans-serif;
+      font-size: 34cqi;
+      font-weight: 500;
+      letter-spacing: -0.045em;
+      line-height: 0.86;
+      font-variant-numeric: tabular-nums;
+    }
+    .date {
+      margin-top: 8px;
+      color: #f4f4f2;
+      font-size: max(13px, 3.6cqi);
+    }
+  </style>
+</head>
+<body>
+  <article class="hour">
+    <svg class="flux" viewBox="0 0 520 220" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="flux-mag" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#ff4fd8" stop-opacity="0" />
+          <stop offset="0.45" stop-color="#fff" />
+          <stop offset="1" stop-color="#ff4fd8" stop-opacity="0" />
+          <animateTransform attributeName="gradientTransform" type="translate" from="-1 0" to="1 0" dur="3.2s" repeatCount="indefinite" />
+        </linearGradient>
+        <linearGradient id="flux-cyan" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#67e8f9" stop-opacity="0" />
+          <stop offset="0.45" stop-color="#fff" />
+          <stop offset="1" stop-color="#22d3ee" stop-opacity="0" />
+          <animateTransform attributeName="gradientTransform" type="translate" from="-1 0" to="1 0" dur="4.4s" begin="-1.6s" repeatCount="indefinite" />
+        </linearGradient>
+        <linearGradient id="flux-violet" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#c4b5fd" stop-opacity="0" />
+          <stop offset="0.5" stop-color="#fff" />
+          <stop offset="1" stop-color="#a78bfa" stop-opacity="0" />
+          <animateTransform attributeName="gradientTransform" type="translate" from="-1 0" to="1 0" dur="5.1s" begin="-2.4s" repeatCount="indefinite" />
+        </linearGradient>
+        <linearGradient id="flux-gold" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#fbbf24" stop-opacity="0" />
+          <stop offset="0.42" stop-color="#fff" />
+          <stop offset="1" stop-color="#67e8f9" stop-opacity="0" />
+          <animateTransform attributeName="gradientTransform" type="translate" from="-1 0" to="1 0" dur="3.8s" begin="-0.8s" repeatCount="indefinite" />
+        </linearGradient>
+        <filter id="flux-light" x="-30%" y="-90%" width="160%" height="280%">
+          <feGaussianBlur stdDeviation="3.2" result="blur" />
+          <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.2  0 0.2 0 0 0.05  0 0 1 0 0.15  0 0 0 1.4 0" result="bloom" />
+          <feMerge>
+            <feMergeNode in="bloom" />
+            <feMergeNode in="bloom" />
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+      <path d="M -30 118 C 90 28, 210 196, 340 86 S 500 24, 580 132" stroke="url(#flux-mag)" stroke-width="5.2" filter="url(#flux-light)" />
+      <path d="M -40 150 C 70 196, 180 70, 320 150 S 490 40, 600 96" stroke="url(#flux-cyan)" stroke-width="3.4" filter="url(#flux-light)" />
+      <path d="M -20 64 C 120 8, 230 120, 380 48 S 540 96, 620 36" stroke="url(#flux-violet)" stroke-width="2.6" filter="url(#flux-light)" />
+      <path d="M -10 104 C 140 168, 260 40, 410 128 S 560 70, 640 150" stroke="url(#flux-gold)" stroke-width="4" filter="url(#flux-light)" />
+    </svg>
+    <span class="glow" id="glow"></span>
+    <p class="time" id="time">00:00</p>
+    <p class="date" id="date"></p>
+  </article>
+  <script>
+    const days = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+    function tick() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, "0");
+      const m = String(now.getMinutes()).padStart(2, "0");
+      document.getElementById("time").textContent = h + ":" + m;
+      document.getElementById("date").textContent = now.getDate() + " " + days[now.getDay()] + " " + now.getFullYear();
+    }
+    const card = document.querySelector(".hour");
+    const glow = document.getElementById("glow");
+    function place(event) {
+      const box = card.getBoundingClientRect();
+      glow.style.left = ((event.clientX - box.left) / box.width) * 100 + "%";
+      glow.style.top = ((event.clientY - box.top) / box.height) * 100 + "%";
+      glow.classList.add("is-on");
+    }
+    card.addEventListener("pointerdown", place);
+    card.addEventListener("pointermove", (event) => {
+      if (event.buttons !== 1 && event.pointerType === "mouse") return;
+      place(event);
+    });
+    card.addEventListener("pointerup", () => glow.classList.remove("is-on"));
+    card.addEventListener("pointerleave", () => glow.classList.remove("is-on"));
+    tick();
+    setInterval(tick, 1000);
+  </script>
+</body>
+</html>

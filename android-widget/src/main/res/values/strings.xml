@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sync Engine</string>
+    <string name="widget_hour_label">Hora</string>
+    <string name="widget_orbit_label">Anillo</string>
+    <string name="widget_agenda_label">Agenda</string>
+    <string name="widget_audio_label">Audio</string>
+    <string name="widget_dash_label">Controles</string>
+    <string name="clock_widget_description">Reloj con anillo de energía</string>
+    <string name="hour_widget_description">Hora, avance del día y fecha</string>
+    <string name="agenda_widget_description">Fecha y actividades</string>
+    <string name="audio_widget_description">Reproducción</string>
+    <string name="dash_widget_description">Volumen y brillo del teléfono</string>
+    <string name="agenda_empty">Sin actividad</string>
+    <string name="agenda_loading">Cargando</string>
+</resources>
