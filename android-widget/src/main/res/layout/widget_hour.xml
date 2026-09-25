@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://android.com"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/energy_flow">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextClock
+            android:id="@+id/widget_clock_hour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:format12Hour="HH:mm"
+            android:format24Hour="HH:mm"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-thin"
+            android:includeFontPadding="false"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="72sp"
+            android:autoSizeMaxTextSize="168sp"
+            android:autoSizeStepGranularity="2sp" />
+        <TextClock
+            android:id="@+id/widget_clock_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:format12Hour="d EEEE yyyy"
+            android:format24Hour="d EEEE yyyy"
+            android:gravity="center"
+            android:textColor="#A0A0A0"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="13sp"
+            android:includeFontPadding="false" />
+    </LinearLayout>
+</RelativeLayout>
